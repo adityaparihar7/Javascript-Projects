@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<title>Todo</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="todo">
+			<div id="todo__head">Completed: 4/10</div>
+			<div id="todo__body">
+				<div class="todo__row complete">
+					<div class="todo__row__default">
+						<div class="todo__row__text">asdfasdfasdfafs</div>
+						<div class="todo__row__edit todo__button"><span class="material-icons">edit</span></div>
+					</div>
+					<div class="todo__row__change">
+						<input class="todo__row__input" value="asdfasdfasdfafs">
+						<div class="todo__row__complete todo__button"><span class="material-icons">done</span></div>
+						<div class="todo__row__delete todo__button"><span class="material-icons">delete</span></div>
+						<div class="todo__row__unedit todo__button"><span class="material-icons">close</span></div>
+					</div>
+				</div>
+				<div class="todo__row">
+					<div class="todo__row__default">
+						<div class="todo__row__text">asdfasdfasdfafs</div>
+						<div class="todo__row__edit todo__button"><span class="material-icons">edit</span></div>
+					</div>
+					<div class="todo__row__change">
+						<input class="todo__row__input" value="asdfasdfasdfafs">
+						<div class="todo__row__complete todo__button"><span class="material-icons">done</span></div>
+						<div class="todo__row__delete todo__button"><span class="material-icons">delete</span></div>
+						<div class="todo__row__unedit todo__button"><span class="material-icons">close</span></div>
+					</div>
+				</div>
+				<div class="todo__row edit">
+					<div class="todo__row__default">
+						<div class="todo__row__text">a123412341fafs</div>
+						<div class="todo__row__edit todo__button"><span class="material-icons">edit</span></div>
+					</div>
+					<div class="todo__row__change">
+						<input class="todo__row__input" value="a12341234sdfafs">
+						<div class="todo__row__complete todo__button"><span class="material-icons">done</span></div>
+						<div class="todo__row__delete todo__button"><span class="material-icons">delete</span></div>
+						<div class="todo__row__unedit todo__button"><span class="material-icons">close</span></div>
+					</div>
+				</div>
+			</div>
+			<div id="todo__post">
+				<input id="todo__post__input" value="">
+				<div id="todo__post__submit" onclick="todo.inputCreate()"><span class="material-icons">add</span></div>
+			</div>
+		</div>
+		<script>todo.init()</script>
+	</body>
+</html>

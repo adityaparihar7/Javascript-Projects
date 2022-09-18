@@ -1,0 +1,101 @@
+html{}
+body{
+	width: 100%;
+	margin: 0px;
+	padding: 1rem; box-sizing: border-box;
+	display: grid; justify-items: center;
+
+	/* https://uigradients.com/#Mauve */
+    background: #e96443;
+    background: -webkit-linear-gradient(to right, #904e95, #e96443);
+    background: linear-gradient(to right, #904e95, #e96443);
+}
+
+#todo{
+	width: 400px;
+}
+@media only screen and (max-width: 600px){
+	#todo{width: 100%;}
+}
+#todo__head{
+	height: 40px;
+	display: grid;
+	align-items: center;
+	padding: 0.75rem;
+	color: #fff;
+	font-weight: 700;
+}
+#todo__body{
+	
+}
+
+.todo__row{
+	margin-bottom: 4px;
+	background: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+
+	/* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+	.todo__row__default{
+		height: 40px; width: 100%;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 40px;
+	}
+		.todo__row__text{
+			display: grid;
+			align-items: center;
+			padding-left: 0.75rem;
+		}
+		.todo__row__edit{
+			display: grid;
+			place-items: center;
+			color: #904e95;
+		}
+	.todo__row__change{
+		display: none;
+		height: 40px; width: 100%;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 40px 40px 40px;
+	}
+		.todo__row__input{
+			border: none;
+			border-right: 1px solid #d4d4d4;
+			background: #e6e6e6;
+		}
+		.todo__row__input:focus{outline: none;}
+		.todo__row__complete{display: grid; place-items: center; color: #48ea53}
+		.todo__row__delete{display: grid; place-items: center; color: #ea4848}
+		.todo__row__unedit{display: grid; place-items: center;color: #4896ea}
+		.todo__button{user-select: none}
+ 		.todo__button:hover{cursor: pointer; background: #e6e6e6}
+.todo__row.edit .todo__row__default{display: none;}
+.todo__row.edit .todo__row__change{display: grid;}
+.todo__row.complete{opacity: .4}
+
+#todo__post{
+	display: grid;
+	grid-template-rows: 40px;
+	grid-template-columns: 1fr 40px;
+}
+#todo__post__input{
+	height: 40px;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid #fff;
+	color: #fff;
+	font-weight: 700;
+}
+#todo__post__input:focus{outline: none}
+
+#todo__post__submit{
+	display: grid; place-items: center;
+	color: #fff;
+	user-select: none;
+}
+#todo__post__submit:hover{
+	cursor: pointer;
+	transform: scale(1.3)
+}
